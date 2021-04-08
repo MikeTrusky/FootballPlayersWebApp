@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FootballPlayersWebApp.Data;
 using FootballPlayersWebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FootballPlayersWebApp.Controllers
 {
@@ -56,6 +57,7 @@ namespace FootballPlayersWebApp.Controllers
         }
 
         // GET: Footballers/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -64,6 +66,7 @@ namespace FootballPlayersWebApp.Controllers
         // POST: Footballers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FootballerName,FootballerClub")] Footballer footballer)
@@ -78,6 +81,7 @@ namespace FootballPlayersWebApp.Controllers
         }
 
         // GET: Footballers/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -96,6 +100,7 @@ namespace FootballPlayersWebApp.Controllers
         // POST: Footballers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,FootballerName,FootballerClub")] Footballer footballer)
@@ -129,6 +134,7 @@ namespace FootballPlayersWebApp.Controllers
         }
 
         // GET: Footballers/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -147,6 +153,7 @@ namespace FootballPlayersWebApp.Controllers
         }
 
         // POST: Footballers/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
