@@ -26,7 +26,7 @@ Web app made as part of learning ASP.NET technology
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Installation</a></li>
+        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
