@@ -1,8 +1,6 @@
 # FootballPlayersWebApp
 Web app made as part of learning ASP.NET technology
 
-FootballPlayersWebApp
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
